@@ -278,8 +278,11 @@ function vidCondition() {
     video.muted = true;
     if (isPlaying) {
         try{
+            console.log(video)
+            console.log(typeof video)
+            console.log(video.src)
             video.play();
-            console.log(video+"working")
+            
         
         }catch(error){
             console.log(error)
