@@ -275,19 +275,10 @@ function loadSong(song) {
 
 //mute if playing
 function vidCondition() {
-    video.muted = true;
     if (isPlaying) {
-        try{
-            console.log(video)
-            console.log(typeof video)
-            console.log(video.src)
+  
             video.play();
             
-        
-        }catch(error){
-            console.log(error)
-            console.log(video+" errror")
-        }
     }
     video.pause();
 }
