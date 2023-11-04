@@ -10,7 +10,7 @@ const prevBtn = document.getElementById("prev");
 const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
 const video = document.getElementById("vidBack");
-video.muted = true;
+
 // Music
 let phonkSong = [
     {
@@ -275,6 +275,7 @@ function loadSong(song) {
 
 //mute if playing
 function vidCondition() {
+    video.muted = true;
     if (isPlaying) {
         video.play();
         return;
