@@ -10,58 +10,13 @@ const prevBtn = document.getElementById("prev");
 const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
 const video = document.querySelector("video");
-
+video.muted = true;
 // Music
-let unShuffledSongs = [
-    {
-        name: "Divine Failure Instrumental",
-        displayName: "Divine Failure Instrumental",
-        artist: "elsooyer",
-    },
-    {
-        name: "Sleep walk",
-        displayName: "Sleep walk [Original instrumental]",
-        artist: "Santo & Johnny",
-    },
-    {
-        name: "MARY ON A CROSS",
-        displayName: "MARY ON A CROSS",
-        artist: "GHOST",
-    },
+let phonkSong = [
     {
         name: "Prolly The Spookiest Beat",
         displayName: "Prolly The Spookiest Beat",
         artist: "Trapbabyjerry",
-    },
-    {
-        name: "Every Breath You Take",
-        displayName: "Every Breath You Take",
-        artist: "The Police",
-    },
-    {
-        name: "Lost Memory",
-        displayName: "Lost Memory",
-        artist: "VØJ, Narvent",
-    },
-    {
-        name: "Here With Me",
-        displayName: "Here With Me",
-        artist: "d4vd",
-    },
-    {
-        name: "Ylang Ylang",
-        displayName: "Ylang Ylang",
-        artist: "FKJ",
-    },
-    {
-        name: "Where Is My Mind",
-        displayName: "Where Is My Mind",
-        artist: "The Pixies",
-    },
-    {
-        name: "snowfall",
-        displayName: "snowfall",
-        artist: "Øneheart",
     },
     {
         name: "MURDER IN MY MIND",
@@ -119,44 +74,22 @@ let unShuffledSongs = [
         artist: "KXNVRA",
     },
     {
-        name: "The Perfect Girl",
-        displayName: "The Perfect Girl",
-        artist: "Mareux",
+        name: "TOKYO HEAT (Club Mix)",
+        displayName: "TOKYO HEAT (Club Mix)",
+        artist: "C.H.A.Y.",
+    },
+];
+
+let randomSong = [
+    {
+        name: "Lonely",
+        displayName: "Lonely",
+        artist: "Akon",
     },
     {
-        name: "Moonlight",
-        displayName: "Moonlight",
-        artist: "Kali Uchis",
-    },
-    {
-        name: "resonance",
-        displayName: "resonance",
-        artist: "HOME",
-    },
-    {
-        name: "pastlive",
-        displayName: "past lives",
-        artist: "sapientdream",
-    },
-    {
-        name: "waste",
-        displayName: "waste",
-        artist: "KXLLSWXTCH",
-    },
-    {
-        name: "Sweater Weather",
-        displayName: "Sweater Weather",
-        artist: "The Neighbourhood",
-    },
-    {
-        name: "mienman",
-        displayName: "Miên Man",
-        artist: "Minh Huy",
-    },
-    {
-        name: "As The World Caves In",
-        displayName: "As The World Caves In",
-        artist: "Sarah Cothran",
+        name: "Safe And Sound",
+        displayName: "Safe And Sound",
+        artist: "Capital Cities",
     },
     {
         name: "What You Wont Do for Love",
@@ -174,9 +107,56 @@ let unShuffledSongs = [
         artist: "VANTAGE",
     },
     {
-        name: "Mrs Magic",
-        displayName: "Mrs Magic",
-        artist: "Strawberry Guy",
+        name: "I'll Do It",
+        displayName: "I'll Do It",
+        artist: "Heidi Montag",
+    },
+    {
+        name: "resonance",
+        displayName: "resonance",
+        artist: "HOME",
+    },
+    {
+        name: "mienman",
+        displayName: "Miên Man",
+        artist: "Minh Huy",
+    },
+    {
+        name: "Sleep walk",
+        displayName: "Sleep walk [Original instrumental]",
+        artist: "Santo & Johnny",
+    },
+    {
+        name: "Every Breath You Take",
+        displayName: "Every Breath You Take",
+        artist: "The Police",
+    },
+    {
+        name: "Moonlight",
+        displayName: "Moonlight",
+        artist: "Kali Uchis",
+    },{
+        name: "Divine Failure Instrumental",
+        displayName: "Divine Failure Instrumental",
+        artist: "elsooyer",
+    }
+];
+
+let ambientSong = [
+    {
+        name: "Lost Memory",
+        displayName: "Lost Memory",
+        artist: "VØJ, Narvent",
+    },
+    {
+        name: "As The World Caves In",
+        displayName: "As The World Caves In",
+        artist: "Sarah Cothran",
+    },
+    {
+        name: "MARY ON A CROSS",
+        displayName: "MARY ON A CROSS",
+        artist: "GHOST",
     },
     {
         name: "we fell in love in october",
@@ -184,19 +164,34 @@ let unShuffledSongs = [
         artist: "girl in red",
     },
     {
-        name: "I'll Do It",
-        displayName: "I'll Do It",
-        artist: "Heidi Montag",
+        name: "Where Is My Mind",
+        displayName: "Where Is My Mind",
+        artist: "The Pixies",
     },
     {
-        name: "Safe And Sound",
-        displayName: "Safe And Sound",
-        artist: "Capital Cities",
+        name: "Ylang Ylang",
+        displayName: "Ylang Ylang",
+        artist: "FKJ",
     },
     {
-        name: "Lonely",
-        displayName: "Lonely",
-        artist: "Akon",
+        name: "Mrs Magic",
+        displayName: "Mrs Magic",
+        artist: "Strawberry Guy",
+    },
+    {
+        name: "waste",
+        displayName: "waste",
+        artist: "KXLLSWXTCH",
+    },
+    {
+        name: "pastlive",
+        displayName: "past lives",
+        artist: "sapientdream",
+    },
+    {
+        name: "Sweater Weather",
+        displayName: "Sweater Weather",
+        artist: "The Neighbourhood",
     },
     {
         name: "In This Shirt",
@@ -204,9 +199,19 @@ let unShuffledSongs = [
         artist: "The Irrepressibles",
     },
     {
-        name: "TOKYO HEAT (Club Mix)",
-        displayName: "TOKYO HEAT (Club Mix)",
-        artist: "C.H.A.Y.",
+        name: "Here With Me",
+        displayName: "Here With Me",
+        artist: "d4vd",
+    },
+    {
+        name: "The Perfect Girl",
+        displayName: "The Perfect Girl",
+        artist: "Mareux",
+    },
+    {
+        name: "snowfall",
+        displayName: "snowfall",
+        artist: "Øneheart",
     },
 ];
 
@@ -217,13 +222,42 @@ let unShuffledSongs = [
 //     artist: ""
 // }
 // Check if playing
-
+var c = 0;
 let isPlaying = false;
+let songs = [];
+let songIndex;
+checkPlaylist();
 
-let songs = [...unShuffledSongs];
-for (let i = songs.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [songs[i], songs[j]] = [songs[j], songs[i]];
+function checkPlaylist() {
+    switch (c) {
+        case 0:
+            {
+                unShuffledSongs = ambientSong;
+                let arrControl = ["prev", "play", "next"];
+                for (let i of arrControl) {
+                    document.getElementById(i).style.color = "white";
+                }
+            }
+            break;
+        case 1: {
+            unShuffledSongs = phonkSong;
+            let arrControl = ["prev", "play", "next"];
+            for (let i of arrControl) {
+                document.getElementById(i).style.color = "white";
+            }
+        }
+    }
+    pauseSong("off");
+    songs = [...unShuffledSongs];
+    for (let i = songs.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [songs[i], songs[j]] = [songs[j], songs[i]];
+    }
+    // On load: Select first song randomly
+    songIndex = Math.floor(Math.random() * songs.length);
+    loadSong(songs[songIndex]);
+    currentTimeEle.textContent = "0:00";
+    progress.style.width = `0%`;
 }
 
 // Update DOM
@@ -237,15 +271,11 @@ function loadSong(song) {
 //mute if playing
 function vidCondition() {
     if (isPlaying) {
-        video.muted = true;
+        video.play();
         return;
     }
-    video.muted = false;
+    video.pause();
 }
-
-// On load: Select first song randomly
-let songIndex = Math.floor(Math.random() * songs.length);
-loadSong(songs[songIndex]);
 
 // Set Song Duration when it's possible to play a song
 function setSongDuration(e) {
@@ -268,22 +298,16 @@ function playSong() {
     changeVideoBackground();
 }
 
-function changeVideoBackground() {
-    switch (c) {
-        case 0:
+function changeVideoBackground(whatKind) {
+    switch (whatKind) {
+        case "ambient":
             {
                 if (!checkVideo("bg_ambient")) {
                     changeSource("/video/bg_ambient.webm");
-                    document.getElementById("playContainer").style.backgroundImage = "url(./img/bg/bg_ambient.jpg)";
-                    document.body.style.color = "white";
-                    let arrControl = ["prev", "play", "next"];
-                    for (let i of arrControl) {
-                        document.getElementById(i).style.color = "white"
-                    }
                 }
             }
             break;
-        case 1:
+        case 0:
             {
                 if (songs[songIndex].name === "Where Is My Mind") {
                     if (!checkVideo("noucan")) {
@@ -294,11 +318,16 @@ function changeVideoBackground() {
                 }
             }
             break;
+        case "phonk": {
+            if (!checkVideo("bg_phonk")) {
+                changeSource("/video/bg_phonk.webm");
+            }
+        }
     }
 }
 
 // Pause
-function pauseSong() {
+function pauseSong(condition) {
     isPlaying = false;
     playBtn.classList.replace("fa-pause", "fa-play");
     playBtn.setAttribute("title", "Play");
@@ -337,7 +366,6 @@ function checkVideo(name) {
 function changeSource(url) {
     let v = document.getElementById("vidBack");
     v.src = url;
-    v.play();
 }
 
 // Display progress bar width and calculate display for current time function
@@ -394,7 +422,7 @@ $("#svgHicon").load("https://s3-us-west-2.amazonaws.com/s.cdpn.io/373860/referen
 
 // Variables
 var btnSz = 200;
-var c = 0;
+
 var bezierEasing = "cubic-bezier(.69,-0.49,0,1)";
 var t1 = 299;
 var t2 = 1198;
@@ -437,8 +465,6 @@ $("#mainWrap").on("click", function () {
         );
     }, 399);
 
-    let body = document.body;
-
     // Move Content
     setTimeout(function () {
         if (c <= 2) {
@@ -458,6 +484,7 @@ $("#mainWrap").on("click", function () {
                     );
                 }
             );
+            changeBanner({ name: "phonk", color: " white" });
         } else if (c == 3) {
             $("#content").transition(
                 {
@@ -511,8 +538,21 @@ $("#mainWrap").on("click", function () {
                 $(".cnt-1").css("order", "0");
             }, t2);
             c = 0;
-            body.style.backgroundImage = "url(./img/bg/bg_ambient.jpg)";
-            changeVideoBackground();
+            changeBanner({ name: "ambient", color: "white" });
         }
     }, 399);
 });
+let body = document.body;
+let btn = document.getElementById("btn");
+function changeBanner({ name, color }) {
+    body.style.backgroundImage = "url(./img/bg/bg_" + name + ".jpg)";
+    btn.style.backgroundImage = "url(./img/banner/banner_" + name + ".jpg";
+    changeVideoBackground(name);
+    document.getElementById("playContainer").style.backgroundImage = "url(./img/cardbg/play_card_" + name + ".jpg)";
+    document.body.style.color = color;
+    let arrControl = ["prev", "play", "next"];
+    for (let i of arrControl) {
+        document.getElementById(i).style.color = color;
+    }
+    checkPlaylist();
+}
