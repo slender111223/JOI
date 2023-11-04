@@ -276,9 +276,8 @@ function loadSong(song) {
 //mute if playing
 function vidCondition() {
     if (isPlaying) {
-  
-            video.play();
-            
+        video.play();
+        return
     }
     video.pause();
 }
