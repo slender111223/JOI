@@ -252,7 +252,7 @@ function checkPlaylist() {
             }
         }
     }
-    pauseSong("off");
+    pauseSong();
     songs = [...unShuffledSongs];
     for (let i = songs.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -332,7 +332,7 @@ function changeVideoBackground(whatKind,extension) {
 }
 
 // Pause
-function pauseSong(condition) {
+function pauseSong() {
     isPlaying = false;
     playBtn.classList.replace("fa-pause", "fa-play");
     playBtn.setAttribute("title", "Play");
