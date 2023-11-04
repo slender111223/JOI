@@ -277,8 +277,14 @@ function loadSong(song) {
 function vidCondition() {
     video.muted = true;
     if (isPlaying) {
-        video.play();
-        return;
+        try{
+            video.play();
+            console.log(video+"working")
+        
+        }catch(error){
+            console.log(error)
+            console.log(video+" errror")
+        }
     }
     video.pause();
 }
