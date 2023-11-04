@@ -308,7 +308,7 @@ function changeVideoBackground(whatKind,extension) {
         case "ambient":
             {
                 if (!checkVideo("bg_ambient")) {
-                    changeSource("/video/bg_ambient.webm");
+                    changeSource("./video/bg_ambient.webm");
                 }
             }
             break;
@@ -325,7 +325,7 @@ function changeVideoBackground(whatKind,extension) {
             break;
         case "phonk": {
             if (!checkVideo("bg_phonk")) {
-                changeSource("/video/bg_phonk.webm");
+                changeSource("./video/bg_phonk.webm");
             }
         }
     }
