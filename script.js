@@ -9,7 +9,7 @@ const durationEle = document.getElementById("duration");
 const prevBtn = document.getElementById("prev");
 const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
-const video = document.querySelector("video");
+const video = document.getElementById("vidBack");
 video.muted = true;
 // Music
 let phonkSong = [
