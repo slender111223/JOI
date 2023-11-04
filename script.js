@@ -78,6 +78,11 @@ let phonkSong = [
         displayName: "TOKYO HEAT (Club Mix)",
         artist: "C.H.A.Y.",
     },
+    {
+        name: "It Goes Like Heat",
+        displayName: "It Goes Like Heat",
+        artist: "C.H.A.Y.",
+    }
 ];
 
 let randomSong = [
@@ -298,7 +303,7 @@ function playSong() {
     changeVideoBackground();
 }
 
-function changeVideoBackground(whatKind) {
+function changeVideoBackground(whatKind,extension) {
     switch (whatKind) {
         case "ambient":
             {
@@ -320,7 +325,7 @@ function changeVideoBackground(whatKind) {
             break;
         case "phonk": {
             if (!checkVideo("bg_phonk")) {
-                changeSource("/video/bg_phonk.webm");
+                changeSource("/video/bg_phonk.mp4");
             }
         }
     }
