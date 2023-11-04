@@ -5,12 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JOI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <!-- Thay đổi phiên bản jQuery tại đây nếu cần -->
+<script src="https://unpkg.com/feather-icons"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
+<script src="https://raw.githubusercontent.com/rdallasgray/bez/master/src/jquery.bez.js"></script>
+
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="./img/thelogo.ico">
 </head>
 <body>
     
-    
+  <div class='lock'></div>
+  <div class='concept-wrap' id='mainWrap'>
+    <div class='tap'>
+      <div class='wave'></div>
+    </div>
+    <div class='btn-wrap' id='btn'>
+      <div class='btn-cnt' id='content'>
+        <div class='cnt cnt-1'><p class='text'>Expert</p>
+          <i class='icon' data-feather="chevron-right"></i>
+        </div>
+        <div class='cnt cnt-2'><p class='text'>Hard</p>
+          <i class='icon' data-feather="chevron-right"></i>
+        </div>
+        <div class='cnt cnt-3'><p class='text'>Normal</p>
+          <i class='icon' data-feather="chevron-right"></i>
+        </div>
+        <div class='cnt cnt-4'><p class='text'>Easy</p>
+          <i class='icon' data-feather="chevron-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
  
 
     <video id="vidBack" src="./video/Blade Runner 2049 _JOI Nude Advertisement_ scene 4k.webm" type="video/webm" autoplay loop muted playsinline></video>
@@ -38,6 +67,7 @@
             <i class="fas fa-forward" id="next" title="Next"></i>
         </div>
     </div>
+    
     <!-- Script -->
     <script src="script.js"></script>
 </body>
