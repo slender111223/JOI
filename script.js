@@ -371,6 +371,11 @@ function checkVideo(name) {
 function changeSource(url) {
     let v = document.getElementById("vidBack");
     v.src = url;
+    if(String(url).includes("bg_phonk")){
+        v.type = "video/mp4" 
+    }else{
+        v.type = "video/webm" 
+    }
 }
 
 // Display progress bar width and calculate display for current time function
