@@ -36,6 +36,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
   transform: scale(0.75);
+
 }
 
 .img-container {
@@ -146,6 +147,8 @@ h3 {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400,700,900');
+
+
  .btn-wrap {
 	 -webkit-user-select: none;
 	 -moz-user-select: none;
@@ -203,7 +206,8 @@ h3 {
  .btn-wrap {
 	 cursor: pointer;
 	 position: absolute;
-	 background: #1462ff;
+	 background-image: url(./img/ambient.jpg); 
+   background-size: cover;
 	 border-radius: 12px;
 	 box-shadow: 0 6px 30px -10px rgba(74, 116, 201, 1);
 	 overflow: hidden;
@@ -224,10 +228,14 @@ h3 {
 	 padding: 0 25px;
 }
  .cnt .text {
-	 text-align: left;
-	 font-size: 1.4em;
-	 margin-right: auto;
-	 color: #fff;
+  text-align: left;
+  font-size: 1.9em;
+  margin-right: auto;
+  color: #fff;
+  font-family: 'Muli', Arial, sans-serif;
+  font-weight: bolder;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 1)
+
 }
  .cnt .icon {
 	 margin-top: 3px;
@@ -289,4 +297,4 @@ h3 {
 	 z-index: 11;
 	 cursor: pointer;
 }
- 
+

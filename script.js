@@ -9,7 +9,7 @@ const durationEle = document.getElementById("duration");
 const prevBtn = document.getElementById("prev");
 const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 // Music
 let unShuffledSongs = [
@@ -21,196 +21,194 @@ let unShuffledSongs = [
     {
         name: "Sleep walk",
         displayName: "Sleep walk [Original instrumental]",
-        artist: "Santo & Johnny"
+        artist: "Santo & Johnny",
     },
     {
         name: "MARY ON A CROSS",
         displayName: "MARY ON A CROSS",
-        artist: "GHOST"
+        artist: "GHOST",
     },
     {
         name: "Prolly The Spookiest Beat",
         displayName: "Prolly The Spookiest Beat",
-        artist: "Trapbabyjerry"
+        artist: "Trapbabyjerry",
     },
     {
         name: "Every Breath You Take",
         displayName: "Every Breath You Take",
-        artist: "The Police"
+        artist: "The Police",
     },
     {
         name: "Lost Memory",
         displayName: "Lost Memory",
-        artist: "VØJ, Narvent"
+        artist: "VØJ, Narvent",
     },
     {
         name: "Here With Me",
         displayName: "Here With Me",
-        artist: "d4vd"
+        artist: "d4vd",
     },
     {
         name: "Ylang Ylang",
         displayName: "Ylang Ylang",
-        artist: "FKJ"
+        artist: "FKJ",
     },
     {
         name: "Where Is My Mind",
         displayName: "Where Is My Mind",
-        artist: "The Pixies"
+        artist: "The Pixies",
     },
     {
         name: "snowfall",
         displayName: "snowfall",
-        artist: "Øneheart"
+        artist: "Øneheart",
     },
     {
         name: "MURDER IN MY MIND",
         displayName: "MURDER IN MY MIND",
-        artist: "KORDHELL"
+        artist: "KORDHELL",
     },
     {
         name: "Sahara",
         displayName: "Sahara",
-        artist: "Hensonn"
+        artist: "Hensonn",
     },
     {
         name: "METAMORPHOSIS",
         displayName: "METAMORPHOSIS",
-        artist: "INTERWORLD"
+        artist: "INTERWORLD",
     },
     {
         name: "NEON BLADE",
         displayName: "NEON BLADE",
-        artist: "MoonDeity"
+        artist: "MoonDeity",
     },
     {
         name: "GigaChad Theme",
         displayName: "GigaChad Theme",
-        artist: "Phonk House"
+        artist: "Phonk House",
     },
     {
         name: "WAKE UP",
         displayName: "WAKE UP!",
-        artist: "MoonDeity"
+        artist: "MoonDeity",
     },
     {
         name: "Close Eyes",
         displayName: "Close Eyes",
-        artist: "DVRST"
+        artist: "DVRST",
     },
     {
         name: "Why Not",
         displayName: "Why Not",
-        artist: "Ghostface Playa"
+        artist: "Ghostface Playa",
     },
     {
         name: "After Dark",
         displayName: "After Dark",
-        artist: "Mr.Kitty"
+        artist: "Mr.Kitty",
     },
     {
         name: "Call Me",
         displayName: "Call Me",
-        artist: "plenka"
+        artist: "plenka",
     },
     {
         name: "PRINCE OF DARKNESS",
         displayName: "PRINCE OF DARKNESS",
-        artist: "KXNVRA"
+        artist: "KXNVRA",
     },
     {
         name: "The Perfect Girl",
         displayName: "The Perfect Girl",
-        artist: "Mareux"
+        artist: "Mareux",
     },
     {
         name: "Moonlight",
         displayName: "Moonlight",
-        artist: "Kali Uchis"
+        artist: "Kali Uchis",
     },
     {
         name: "resonance",
         displayName: "resonance",
-        artist: "HOME"
+        artist: "HOME",
     },
     {
         name: "pastlive",
         displayName: "past lives",
-        artist: "sapientdream"
+        artist: "sapientdream",
     },
     {
         name: "waste",
         displayName: "waste",
-        artist: "KXLLSWXTCH"
+        artist: "KXLLSWXTCH",
     },
     {
         name: "Sweater Weather",
         displayName: "Sweater Weather",
-        artist: "The Neighbourhood"
+        artist: "The Neighbourhood",
     },
     {
         name: "mienman",
         displayName: "Miên Man",
-        artist: "Minh Huy"
+        artist: "Minh Huy",
     },
     {
         name: "As The World Caves In",
         displayName: "As The World Caves In",
-        artist: "Sarah Cothran"
+        artist: "Sarah Cothran",
     },
     {
         name: "What You Wont Do for Love",
         displayName: "What You Wont Do for Love",
-        artist: "Bobby Caldwell"
+        artist: "Bobby Caldwell",
     },
     {
         name: "Starships",
         displayName: "Starships",
-        artist: "Nicki Minaj"
+        artist: "Nicki Minaj",
     },
     {
         name: "5050",
         displayName: "50//50",
-        artist: "VANTAGE"
+        artist: "VANTAGE",
     },
     {
         name: "Mrs Magic",
         displayName: "Mrs Magic",
-        artist: "Strawberry Guy"
+        artist: "Strawberry Guy",
     },
     {
         name: "we fell in love in october",
         displayName: "we fell in love in october",
-        artist: "girl in red"
+        artist: "girl in red",
     },
     {
         name: "I'll Do It",
         displayName: "I'll Do It",
-        artist: "Heidi Montag"
+        artist: "Heidi Montag",
     },
     {
         name: "Safe And Sound",
         displayName: "Safe And Sound",
-        artist: "Capital Cities"
+        artist: "Capital Cities",
     },
     {
         name: "Lonely",
         displayName: "Lonely",
-        artist: "Akon"
+        artist: "Akon",
     },
     {
         name: "In This Shirt",
         displayName: "In This Shirt",
-        artist: "The Irrepressibles"
+        artist: "The Irrepressibles",
     },
     {
         name: "TOKYO HEAT (Club Mix)",
         displayName: "TOKYO HEAT (Club Mix)",
-        artist: "C.H.A.Y."
-    }
+        artist: "C.H.A.Y.",
+    },
 ];
-
-
 
 // ,
 // {
@@ -220,15 +218,13 @@ let unShuffledSongs = [
 // }
 // Check if playing
 
-
 let isPlaying = false;
 
 let songs = [...unShuffledSongs];
 for (let i = songs.length - 1; i > 0; i--) {
-  const j = Math.floor(Math.random() * (i + 1));
-  [songs[i], songs[j]] = [songs[j], songs[i]];
+    const j = Math.floor(Math.random() * (i + 1));
+    [songs[i], songs[j]] = [songs[j], songs[i]];
 }
-
 
 // Update DOM
 function loadSong(song) {
@@ -239,8 +235,8 @@ function loadSong(song) {
 }
 
 //mute if playing
-function vidCondition(){
-    if(isPlaying){
+function vidCondition() {
+    if (isPlaying) {
         video.muted = true;
         return;
     }
@@ -262,9 +258,6 @@ function setSongDuration(e) {
     durationEle.textContent = `${durationMinutes}:${durationSeconds}`;
 }
 
-
-
-
 // Play
 function playSong() {
     isPlaying = true;
@@ -272,16 +265,35 @@ function playSong() {
     playBtn.setAttribute("title", "Pause");
     music.play();
     vidCondition();
-    changeVideoBackground()
+    changeVideoBackground();
 }
 
-function changeVideoBackground(){
-    if(songs[songIndex].name ==="Where Is My Mind"){
-        if(!checkVideo()){
-            changeSource("./video/noucan.webm")
-        }
-    }else if(checkVideo()){
-        changeSource("./video/Blade Runner 2049 _JOI Nude Advertisement_ scene 4k.webm")
+function changeVideoBackground() {
+    switch (c) {
+        case 0:
+            {
+                if (!checkVideo("bg_ambient")) {
+                    changeSource("/video/bg_ambient.webm");
+                    document.getElementById("playContainer").style.backgroundImage = "url(./img/bg/bg_ambient.jpg)";
+                    document.body.style.color = "white";
+                    let arrControl = ["prev", "play", "next"];
+                    for (let i of arrControl) {
+                        document.getElementById(i).style.color = "white"
+                    }
+                }
+            }
+            break;
+        case 1:
+            {
+                if (songs[songIndex].name === "Where Is My Mind") {
+                    if (!checkVideo("noucan")) {
+                        changeSource("./video/noucan.webm");
+                    }
+                } else if (checkVideo("noucan")) {
+                    changeSource("./video/Blade Runner 2049 _JOI Nude Advertisement_ scene 4k.webm");
+                }
+            }
+            break;
     }
 }
 
@@ -303,7 +315,6 @@ function prevSong() {
     loadSong(songs[songIndex]);
     progress.style.width = `0%`;
     playSong();
-    
 }
 
 // Next Song
@@ -317,17 +328,17 @@ function nextSong() {
     playSong();
 }
 
-function checkVideo(){
-    let v = document.getElementById('vidBack');
-    if (String(v.src).includes("noucan")) return true
-    return false
+function checkVideo(name) {
+    let v = document.getElementById("vidBack");
+    if (String(v.src).includes(name)) return true;
+    return false;
 }
 
 function changeSource(url) {
-    let v = document.getElementById('vidBack');
+    let v = document.getElementById("vidBack");
     v.src = url;
     v.play();
- }
+}
 
 // Display progress bar width and calculate display for current time function
 function barWidthAndCurrentTime() {
@@ -375,91 +386,133 @@ progressContainer.addEventListener("click", setProgressBar);
 feather.replace();
 
 // SVGs
-$('#svgDribbble').load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/373860/references.html #dribbble');
-$('#svgTwitter').load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/373860/references.html #twitter');
-$('#svgHicon').load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/373860/references.html #hicon');
+$("#svgDribbble").load("https://s3-us-west-2.amazonaws.com/s.cdpn.io/373860/references.html #dribbble");
+$("#svgTwitter").load("https://s3-us-west-2.amazonaws.com/s.cdpn.io/373860/references.html #twitter");
+$("#svgHicon").load("https://s3-us-west-2.amazonaws.com/s.cdpn.io/373860/references.html #hicon");
 
 // NEW CODE HERE
 
 // Variables
 var btnSz = 200;
 var c = 0;
-var bezierEasing = 'cubic-bezier(.69,-0.49,0,1)';
+var bezierEasing = "cubic-bezier(.69,-0.49,0,1)";
 var t1 = 299;
 var t2 = 1198;
 
-var bZ2 = 'cubic-bezier(.46,.56,0,.88)'
+var bZ2 = "cubic-bezier(.46,.56,0,.88)";
 
-$('#mainWrap').on('click', function() {
-  c++;
-  console.log(c);
-  
-  // Lock
-  $('.lock').addClass('lock-on');
-  setTimeout(function() {
-    $('.lock').removeClass('lock-on');
-  }, 1200);
-  
-  // Wave
-  $('.wave').addClass('wave-act');
-  setTimeout(function() {
-    $('.wave').removeClass('wave-act');
-  }, 1000);
+$("#mainWrap").on("click", function () {
+    c++;
+    console.log(c);
 
-  // Move Button
-  setTimeout(function() {
-    $('#btn').transition({
-      x: '+=10px'
-    }, 289, bZ2, function() {
-      $('#btn').transition({
-        x: '0px'
-      }, 289, bZ2);
-    }); 
-  }, 399);
+    // Lock
+    $(".lock").addClass("lock-on");
+    setTimeout(function () {
+        $(".lock").removeClass("lock-on");
+    }, 1200);
 
+    // Wave
+    $(".wave").addClass("wave-act");
+    setTimeout(function () {
+        $(".wave").removeClass("wave-act");
+    }, 1000);
 
-  // Move Content
-  setTimeout(function() {
-    if (c <= 2) {
-      $('#content').transition({
-        x: '+=220px'
-      }, t1, bezierEasing, function() {
-        $('#content').transition({
-          x: '-=20'
-        }, 699, 'cubic-bezier(.25,.49,.2,1)');
-      });
+    // Move Button
+    setTimeout(function () {
+        $("#btn").transition(
+            {
+                x: "+=10px",
+            },
+            289,
+            bZ2,
+            function () {
+                $("#btn").transition(
+                    {
+                        x: "0px",
+                    },
+                    289,
+                    bZ2
+                );
+            }
+        );
+    }, 399);
 
-    } else if (c == 3) {
-      $('#content').transition({
-        x: '+=220px'
-      }, t1, bezierEasing, function() {
-        $('#content').transition({
-          x: '-=20'
-        }, 699, 'cubic-bezier(.25,.49,.2,1)');
-      });
-      setTimeout(function() {
-        $('.cnt-1').css('order', '4');
-        $('#content').transition({
-          x: '0'
-        }, 0);
-      }, t2);
-    } else if (c == 4) {
-      $('#content').transition({
-        x: '+=220px'
-      }, t1, bezierEasing, function() {
-        $('#content').transition({
-          x: '-=20'
-        }, 699, 'cubic-bezier(.25,.49,.2,1)');
-      });
-      setTimeout(function() {
-        $('#content').transition({
-          x: '0'
-        }, 0);
-        $('.cnt-1').css('order', '0');
-      }, t2);
-      c = 0;
-    } 
-  }, 399)
+    let body = document.body;
 
-
+    // Move Content
+    setTimeout(function () {
+        if (c <= 2) {
+            $("#content").transition(
+                {
+                    x: "+=220px",
+                },
+                t1,
+                bezierEasing,
+                function () {
+                    $("#content").transition(
+                        {
+                            x: "-=20",
+                        },
+                        699,
+                        "cubic-bezier(.25,.49,.2,1)"
+                    );
+                }
+            );
+        } else if (c == 3) {
+            $("#content").transition(
+                {
+                    x: "+=220px",
+                },
+                t1,
+                bezierEasing,
+                function () {
+                    $("#content").transition(
+                        {
+                            x: "-=20",
+                        },
+                        699,
+                        "cubic-bezier(.25,.49,.2,1)"
+                    );
+                }
+            );
+            setTimeout(function () {
+                $(".cnt-1").css("order", "4");
+                $("#content").transition(
+                    {
+                        x: "0",
+                    },
+                    0
+                );
+            }, t2);
+        } else if (c == 4) {
+            $("#content").transition(
+                {
+                    x: "+=220px",
+                },
+                t1,
+                bezierEasing,
+                function () {
+                    $("#content").transition(
+                        {
+                            x: "-=20",
+                        },
+                        699,
+                        "cubic-bezier(.25,.49,.2,1)"
+                    );
+                }
+            );
+            setTimeout(function () {
+                $("#content").transition(
+                    {
+                        x: "0",
+                    },
+                    0
+                );
+                $(".cnt-1").css("order", "0");
+            }, t2);
+            c = 0;
+            body.style.backgroundImage = "url(./img/bg/bg_ambient.jpg)";
+            changeVideoBackground();
+        }
+    }, 399);
 });
