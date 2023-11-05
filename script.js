@@ -325,7 +325,7 @@ function changeVideoBackground(whatKind,extension) {
             break;
         case "phonk": {
             if (!checkVideo("bg_phonk")) {
-                changeSource("./video/bg_phonk.webm");
+                changeSource("./video/bg_phonk.mp4");
             }
         }
     }
@@ -371,6 +371,11 @@ function checkVideo(name) {
 function changeSource(url) {
     let v = document.getElementById("vidBack");
     v.src = url;
+    if(String(url).includes("bg_phonk")){
+        v.type = "video/mp4"
+    }else{
+        v.type = "video/webm"
+    }
 }
 
 // Display progress bar width and calculate display for current time function
