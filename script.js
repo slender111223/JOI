@@ -144,34 +144,55 @@ let randomSong = [
         name: "Divine Failure Instrumental",
         displayName: "Divine Failure Instrumental",
         artist: "elsooyer",
-    }
-];
-
-let ambientSong = [
-    {
-        name: "Lost Memory",
-        displayName: "Lost Memory",
-        artist: "VØJ, Narvent",
-    },
-    {
-        name: "As The World Caves In",
-        displayName: "As The World Caves In",
-        artist: "Sarah Cothran",
-    },
-    {
+    },{
+        name: "Save Your Tears",
+        displayName: "Save Your Tears",
+        artist: "The Weeknd & Ariana Grande",
+    },{
         name: "MARY ON A CROSS",
         displayName: "MARY ON A CROSS",
         artist: "GHOST",
     },
+    {
+        name: "Where Is My Mind",
+        displayName: "Where Is My Mind",
+        artist: "The Pixies",
+    },
+    
     {
         name: "we fell in love in october",
         displayName: "we fell in love in october",
         artist: "girl in red",
     },
     {
-        name: "Where Is My Mind",
-        displayName: "Where Is My Mind",
-        artist: "The Pixies",
+        name: "The Perfect Girl",
+        displayName: "The Perfect Girl",
+        artist: "Mareux",
+    },{
+        name: "Lost Memory",
+        displayName: "Lost Memory",
+        artist: "VØJ, Narvent",
+    },
+    {
+        name: "Sweater Weather",
+        displayName: "Sweater Weather",
+        artist: "The Neighbourhood",
+    },
+    {
+        name: "collide",
+        displayName: "collide",
+        artist: "Avicii (ft. Leona Lewis)",
+    }
+    
+    
+];
+
+let ambientSong = [
+    
+    {
+        name: "As The World Caves In",
+        displayName: "As The World Caves In",
+        artist: "Sarah Cothran",
     },
     {
         name: "Ylang Ylang",
@@ -194,11 +215,6 @@ let ambientSong = [
         artist: "sapientdream",
     },
     {
-        name: "Sweater Weather",
-        displayName: "Sweater Weather",
-        artist: "The Neighbourhood",
-    },
-    {
         name: "In This Shirt",
         displayName: "In This Shirt",
         artist: "The Irrepressibles",
@@ -209,15 +225,10 @@ let ambientSong = [
         artist: "d4vd",
     },
     {
-        name: "The Perfect Girl",
-        displayName: "The Perfect Girl",
-        artist: "Mareux",
-    },
-    {
         name: "snowfall",
         displayName: "snowfall",
         artist: "Øneheart",
-    },
+    }
 ];
 
 // ,
@@ -250,6 +261,13 @@ function checkPlaylist() {
             for (let i of arrControl) {
                 document.getElementById(i).style.color = "white";
             }
+        }; break;
+        case 2:{
+            unShuffledSongs = randomSong;
+            let arrControl = ["prev", "play", "next"];
+            for (let i of arrControl) {
+                document.getElementById(i).style.color = "black";
+            }
         }
     }
     pauseSong();
@@ -270,7 +288,7 @@ function loadSong(song) {
     title.textContent = song.displayName;
     artist.textContent = song.artist;
     music.src = `music/${song.name}.mp3`;
-    image.src = `img/${song.name}.jpg`;
+    image.src = `img/music/${song.name}.jpg`;
 }
 
 //mute if playing
@@ -312,8 +330,11 @@ function changeVideoBackground(whatKind,extension) {
                 }
             }
             break;
-        case 0:
+        case "random":
             {
+                if (!checkVideo("Blade Runner 2049 _JOI Nude Advertisement_ scene 4k")) {
+                    changeSource("./video/Blade Runner 2049 _JOI Nude Advertisement_ scene 4k.webm");
+                }
                 if (songs[songIndex].name === "Where Is My Mind") {
                     if (!checkVideo("noucan")) {
                         changeSource("./video/noucan.webm");
@@ -327,7 +348,7 @@ function changeVideoBackground(whatKind,extension) {
             if (!checkVideo("bg_phonk")) {
                 changeSource("./video/bg_phonk.mp4");
             }
-        }
+        }; break;
     }
 }
 
@@ -477,7 +498,7 @@ $("#mainWrap").on("click", function () {
 
     // Move Content
     setTimeout(function () {
-        if (c <= 2) {
+        if (c < 2) {
             $("#content").transition(
                 {
                     x: "+=220px",
@@ -495,7 +516,27 @@ $("#mainWrap").on("click", function () {
                 }
             );
             changeBanner({ name: "phonk", color: " white" });
-        } else if (c == 3) {
+        } else if(c ==2){
+            $("#content").transition(
+            {
+                x: "+=220px",
+            },
+            t1,
+            bezierEasing,
+            function () {
+                $("#content").transition(
+                    {
+                        x: "-=20",
+                    },
+                    699,
+                    "cubic-bezier(.25,.49,.2,1)"
+                );
+            }
+        );
+            changeBanner({name: "random", color: "black"})
+        }
+        
+        else if (c == 3) {
             $("#content").transition(
                 {
                     x: "+=220px",
@@ -521,6 +562,7 @@ $("#mainWrap").on("click", function () {
                     0
                 );
             }, t2);
+            
         } else if (c == 4) {
             $("#content").transition(
                 {
@@ -555,6 +597,7 @@ $("#mainWrap").on("click", function () {
 let body = document.body;
 let btn = document.getElementById("btn");
 function changeBanner({ name, color }) {
+    console.log(c, name)
     body.style.backgroundImage = "url(./img/bg/bg_" + name + ".jpg)";
     btn.style.backgroundImage = "url(./img/banner/banner_" + name + ".jpg";
     changeVideoBackground(name);
