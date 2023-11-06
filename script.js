@@ -187,6 +187,18 @@ let randomSong = [
     
 ];
 
+let vinaSong = [
+    {
+        name: "Tum Dum Dum",
+        displayName: "Tum Dum Dum",
+        artist: "DJ Vavva", 
+    },{
+        name: "Dreams",
+        displayName: "Dreams",
+        artist: "ZHU & Nero", 
+    }
+]
+
 let ambientSong = [
     
     {
@@ -267,6 +279,13 @@ function checkPlaylist() {
             let arrControl = ["prev", "play", "next"];
             for (let i of arrControl) {
                 document.getElementById(i).style.color = "black";
+            }
+        };break;
+        case 3:{
+            unShuffledSongs = vinaSong;
+            let arrControl = ["prev", "play", "next"];
+            for (let i of arrControl) {
+                document.getElementById(i).style.color = "white";
             }
         }
     }
@@ -349,6 +368,11 @@ function changeVideoBackground(whatKind,extension) {
                 changeSource("./video/bg_phonk.mp4");
             }
         }; break;
+        case "vinahouse":{
+            if (!checkVideo("bg_vinahouse")) {
+                changeSource("./video/bg_vinahouse.webm");
+            }
+        };break
     }
 }
 
@@ -562,7 +586,7 @@ $("#mainWrap").on("click", function () {
                     0
                 );
             }, t2);
-            
+            changeBanner({ name: "vinahouse", color: "white" });
         } else if (c == 4) {
             $("#content").transition(
                 {
@@ -598,7 +622,14 @@ let body = document.body;
 let btn = document.getElementById("btn");
 function changeBanner({ name, color }) {
     console.log(c, name)
-    body.style.backgroundImage = "url(./img/bg/bg_" + name + ".jpg)";
+    if(name === "vinahouse"){
+        body.style.backgroundImage = "url(./img/bg/bg_" + name + ".gif)";
+    }else if(name === "random"){
+        body.style.backgroundImage = "url(./img/bg/bg_" + name + ".png)";
+    }else{
+        body.style.backgroundImage = "url(./img/bg/bg_" + name + ".jpg)";
+    }
+
     btn.style.backgroundImage = "url(./img/banner/banner_" + name + ".jpg";
     changeVideoBackground(name);
     document.getElementById("playContainer").style.backgroundImage = "url(./img/cardbg/play_card_" + name + ".jpg)";
