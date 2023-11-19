@@ -12,6 +12,11 @@ const nextBtn = document.getElementById("next");
 const video = document.getElementById("vidBack");
 
 // Music
+
+
+
+
+
 let phonkSong = [
     {
         name: "Prolly The Spookiest Beat",
@@ -86,6 +91,22 @@ let phonkSong = [
         name: "Dreams",
         displayName: "Dreams",
         artist: "ZHU & Nero", 
+    },{
+        name: "johnwick_redcircleandshotfired",
+        displayName: "Red Circle",
+        artist: "Le Castle Vania",
+    },{
+        name: "johnwick_booldcode",
+        displayName: "Blood Code",
+        artist: "Le Castle Vania",
+    },{
+        name: "johnwick_wetwork",
+        displayName: "Wetwork",
+        artist: "Le Castle Vania",
+    },{
+        name: "johnwick_mix",
+        displayName: "Complete John Wick Mode Mix",
+        artist: "Le Castle Vania",
     }
 ];
 
@@ -186,6 +207,18 @@ let randomSong = [
         name: "collide",
         displayName: "collide",
         artist: "Avicii (ft. Leona Lewis)",
+    },{
+        name: "johnwick_ending",
+        displayName: "Complete John Wick Mode Mix",
+        artist: "Le Castle Vania",
+    },{
+        name: "THINK by KALEIDA",
+        displayName: "THINK by KALEIDA",
+        artist: "Kaleida",
+    },{
+        name: "johnwick_inmymind",
+        displayName: "In My Mind",
+        artist: "M86 ft. Susie Q",
     }
     
     
@@ -307,6 +340,10 @@ function loadSong(song) {
     title.textContent = song.displayName;
     artist.textContent = song.artist;
     music.src = `music/${song.name}.mp3`;
+    if(String(song.name).includes("johnwick")){
+        image.src = `img/music/johnwick.jpg`;
+        return
+    }
     image.src = `img/music/${song.name}.jpg`;
 }
 
