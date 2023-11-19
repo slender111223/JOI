@@ -82,6 +82,10 @@ let phonkSong = [
         name: "It Goes Like Heat",
         displayName: "It Goes Like Heat",
         artist: "C.H.A.Y.",
+    },{
+        name: "Dreams",
+        displayName: "Dreams",
+        artist: "ZHU & Nero", 
     }
 ];
 
@@ -192,10 +196,6 @@ let vinaSong = [
         name: "Tum Dum Dum",
         displayName: "Tum Dum Dum",
         artist: "DJ Vavva", 
-    },{
-        name: "Dreams",
-        displayName: "Dreams",
-        artist: "ZHU & Nero", 
     }
 ]
 
@@ -370,7 +370,7 @@ function changeVideoBackground(whatKind,extension) {
         }; break;
         case "vinahouse":{
             if (!checkVideo("bg_vinahouse")) {
-                changeSource("./video/bg_vinahouse.webm");
+                changeSource("./video/bg_vinahouse.mp4");
             }
         };break
     }
@@ -416,7 +416,7 @@ function checkVideo(name) {
 function changeSource(url) {
     let v = document.getElementById("vidBack");
     v.src = url;
-    if(String(url).includes("bg_phonk")){
+    if(String(url).includes("bg_phonk") || String(url).includes("bg_vinahouse") ){
         v.type = "video/mp4"
     }else{
         v.type = "video/webm"
