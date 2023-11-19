@@ -12,10 +12,48 @@ const nextBtn = document.getElementById("next");
 const video = document.getElementById("vidBack");
 
 // Music
-
-
-
-
+let ambientSong = [
+    {
+        name: "As The World Caves In",
+        displayName: "As The World Caves In",
+        artist: "Sarah Cothran",
+    },
+    {
+        name: "Ylang Ylang",
+        displayName: "Ylang Ylang",
+        artist: "FKJ",
+    },
+    {
+        name: "Mrs Magic",
+        displayName: "Mrs Magic",
+        artist: "Strawberry Guy",
+    },
+    {
+        name: "waste",
+        displayName: "waste",
+        artist: "KXLLSWXTCH",
+    },
+    {
+        name: "pastlive",
+        displayName: "past lives",
+        artist: "sapientdream",
+    },
+    {
+        name: "In This Shirt",
+        displayName: "In This Shirt",
+        artist: "The Irrepressibles",
+    },
+    {
+        name: "Here With Me",
+        displayName: "Here With Me",
+        artist: "d4vd",
+    },
+    {
+        name: "snowfall",
+        displayName: "snowfall",
+        artist: "Øneheart",
+    },
+];
 
 let phonkSong = [
     {
@@ -87,27 +125,32 @@ let phonkSong = [
         name: "It Goes Like Heat",
         displayName: "It Goes Like Heat",
         artist: "C.H.A.Y.",
-    },{
+    },
+    {
         name: "Dreams",
         displayName: "Dreams",
-        artist: "ZHU & Nero", 
-    },{
+        artist: "ZHU & Nero",
+    },
+    {
         name: "johnwick_redcircleandshotfired",
         displayName: "Red Circle",
         artist: "Le Castle Vania",
-    },{
+    },
+    {
         name: "johnwick_booldcode",
         displayName: "Blood Code",
         artist: "Le Castle Vania",
-    },{
+    },
+    {
         name: "johnwick_wetwork",
         displayName: "Wetwork",
         artist: "Le Castle Vania",
-    },{
+    },
+    {
         name: "johnwick_mix",
         displayName: "Complete John Wick Mode Mix",
         artist: "Le Castle Vania",
-    }
+    },
 ];
 
 let randomSong = [
@@ -165,15 +208,18 @@ let randomSong = [
         name: "Moonlight",
         displayName: "Moonlight",
         artist: "Kali Uchis",
-    },{
+    },
+    {
         name: "Divine Failure Instrumental",
         displayName: "Divine Failure Instrumental",
         artist: "elsooyer",
-    },{
+    },
+    {
         name: "Save Your Tears",
         displayName: "Save Your Tears",
         artist: "The Weeknd & Ariana Grande",
-    },{
+    },
+    {
         name: "MARY ON A CROSS",
         displayName: "MARY ON A CROSS",
         artist: "GHOST",
@@ -183,7 +229,7 @@ let randomSong = [
         displayName: "Where Is My Mind",
         artist: "The Pixies",
     },
-    
+
     {
         name: "we fell in love in october",
         displayName: "we fell in love in october",
@@ -193,7 +239,8 @@ let randomSong = [
         name: "The Perfect Girl",
         displayName: "The Perfect Girl",
         artist: "Mareux",
-    },{
+    },
+    {
         name: "Lost Memory",
         displayName: "Lost Memory",
         artist: "VØJ, Narvent",
@@ -207,74 +254,43 @@ let randomSong = [
         name: "collide",
         displayName: "collide",
         artist: "Avicii (ft. Leona Lewis)",
-    },{
+    },
+    {
         name: "johnwick_ending",
         displayName: "Complete John Wick Mode Mix",
         artist: "Le Castle Vania",
-    },{
+    },
+    {
         name: "THINK by KALEIDA",
         displayName: "THINK by KALEIDA",
         artist: "Kaleida",
-    },{
+    },
+    {
         name: "johnwick_inmymind",
         displayName: "In My Mind",
         artist: "M86 ft. Susie Q",
-    }
-    
-    
+    },
 ];
 
 let vinaSong = [
     {
         name: "Tum Dum Dum",
         displayName: "Tum Dum Dum",
-        artist: "DJ Vavva", 
-    }
-]
-
-let ambientSong = [
-    
-    {
-        name: "As The World Caves In",
-        displayName: "As The World Caves In",
-        artist: "Sarah Cothran",
+        artist: "DJ Vavva",
     },
     {
-        name: "Ylang Ylang",
-        displayName: "Ylang Ylang",
-        artist: "FKJ",
+        name: "Don't Ya",
+        displayName: "Don't Ya",
+        artist: "Sea Ft Dj Nek",
     },
     {
-        name: "Mrs Magic",
-        displayName: "Mrs Magic",
-        artist: "Strawberry Guy",
+        name: "Supper Bom",
+        displayName: "Supper Bom",
+        artist: "DJ Nick",
     },
-    {
-        name: "waste",
-        displayName: "waste",
-        artist: "KXLLSWXTCH",
-    },
-    {
-        name: "pastlive",
-        displayName: "past lives",
-        artist: "sapientdream",
-    },
-    {
-        name: "In This Shirt",
-        displayName: "In This Shirt",
-        artist: "The Irrepressibles",
-    },
-    {
-        name: "Here With Me",
-        displayName: "Here With Me",
-        artist: "d4vd",
-    },
-    {
-        name: "snowfall",
-        displayName: "snowfall",
-        artist: "Øneheart",
-    }
 ];
+
+
 
 // ,
 // {
