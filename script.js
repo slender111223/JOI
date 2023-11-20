@@ -57,7 +57,13 @@ let ambientSong = [
         name: "nostalgia",
         displayName: "nostalgia",
         artist: "Øneheart"
+    },
+    {
+        name: "Melancholy",
+        displayName: "Melancholy",
+        artist: "WHITE CHERRY"
     }
+    
 ];
 // ,
 // {
@@ -161,7 +167,8 @@ let phonkSong = [
         name: "johnwick_mix",
         displayName: "Complete John Wick Mode Mix",
         artist: "Le Castle Vania",
-    },
+    }
+    
 ];
 // ,
 // {
@@ -305,6 +312,26 @@ let randomSong = [
         name: "Arena Queue",
         displayName: "Arena Queue",
         artist: "League Of Legends"
+    },
+    {
+        name: "Hẹn Em",
+        displayName: "Hẹn Em",
+        artist: "Nguyenn"
+    },
+    {
+        name: "Cold Heart",
+        displayName: "Cold Heart",
+        artist: "Elton John, Dua Lipa"
+    },
+    {
+        name: "As It Was",
+        displayName: "As It Was",
+        artist: "Harry Styles"
+    },
+    {
+        name: "California Gurls",
+        displayName: "California Gurls",
+        artist: "Katy Perry"
     }
 ];
 // ,
