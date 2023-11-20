@@ -62,6 +62,16 @@ let ambientSong = [
         name: "Melancholy",
         displayName: "Melancholy",
         artist: "WHITE CHERRY"
+    },
+    {
+        name: "We're Finally Landing",
+        displayName: "We're Finally Landing",
+        artist: "Home"
+    },
+    {
+        name: "My Love Mine All Mine",
+        displayName: "My Love Mine All Mine",
+        artist: "Mitski"
     }
     
 ];
@@ -332,6 +342,21 @@ let randomSong = [
         name: "California Gurls",
         displayName: "California Gurls",
         artist: "Katy Perry"
+    },
+    {
+        name: "You Belong With Me",
+        displayName: "You Belong With Me",
+        artist: "Taylor Swift"
+    },
+    {
+        name: "Notion",
+        displayName: "Notion",
+        artist: "The Rare Occasions"
+    },
+    {
+        name: "Puppy Love",
+        displayName: "Puppy Love",
+        artist: "Paul Anka"
     }
 ];
 // ,
