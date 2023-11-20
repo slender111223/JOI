@@ -53,7 +53,18 @@ let ambientSong = [
         displayName: "snowfall",
         artist: "Øneheart",
     },
+    {
+        name: "nostalgia",
+        displayName: "nostalgia",
+        artist: "Øneheart"
+    }
 ];
+// ,
+// {
+//     name: "",
+//     displayName: "",
+//     artist: ""
+// }
 
 let phonkSong = [
     {
@@ -152,6 +163,12 @@ let phonkSong = [
         artist: "Le Castle Vania",
     },
 ];
+// ,
+// {
+//     name: "",
+//     displayName: "",
+//     artist: ""
+// }
 
 let randomSong = [
     {
@@ -269,8 +286,33 @@ let randomSong = [
         name: "johnwick_inmymind",
         displayName: "In My Mind",
         artist: "M86 ft. Susie Q",
+    },{
+        name: "L'Amour Toujours",
+        displayName: "L'Amour Toujours",
+        artist: "Dzeko & Torres"
     },
+    {
+        name: "Million Days",
+        displayName: "Million Days",
+        artist: "Sabai"
+    },
+    {
+        name: "MAYDAY",
+        displayName: "MAYDAY",
+        artist: "TheFatRat"
+    },
+    {
+        name: "Arena Queue",
+        displayName: "Arena Queue",
+        artist: "League Of Legends"
+    }
 ];
+// ,
+// {
+//     name: "",
+//     displayName: "",
+//     artist: ""
+// }
 
 let vinaSong = [
     {
@@ -288,6 +330,17 @@ let vinaSong = [
         displayName: "Supper Bom",
         artist: "DJ Nick",
     },
+    {
+        name: "WHAT",
+        displayName: "WHAT",
+        artist: "Rnbstylerz & AREES"
+    },
+    {
+        name: "Thereon",
+        displayName: "Light It Up x Rise",
+        artist: "Thereon"
+    }
+    
 ];
 
 
