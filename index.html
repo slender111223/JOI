@@ -7,68 +7,85 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
         <!-- Thay đổi phiên bản jQuery tại đây nếu cần -->
         <script src="https://unpkg.com/feather-icons"></script>
- 
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
         <script src="https://raw.githubusercontent.com/rdallasgray/bez/master/src/jquery.bez.js"></script>
- 
+
         <link rel="stylesheet" href="style.css" />
         <link rel="icon" type="image/x-icon" href="./img/thelogo.ico" />
     </head>
+
     <body>
+        <!-- button to the blog -->
+        <div id="container-button">
+            <div id="web-container">
+                <a target="_blank" href="https://phihungne.blogspot.com">
+                    <button id="button-home" class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">See my blog</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <!-- video background -->
         <video id="vidBack" src="./video/bg_ambient.webm" type="video/webm" autoplay loop muted playsinline></video>
- 
-        <div id="menuPlay" style="display: block;">
-            <div style="display: flex; justify-content: center; position: relative;">
-                <div class="lock"></div>
-                <div class="concept-wrap" id="mainWrap">
-                    <div class="tap">
-                        <div class="wave"></div>
-                    </div>
-                    <div class="btn-wrap" id="btn">
-                        <div class="btn-cnt" id="content">
-                            <div class="cnt cnt-1">
-                                <p class="text">vinahouse</p>
-                                <i class="icon" data-feather="chevron-right"></i>
-                            </div>
-                            <div class="cnt cnt-2">
-                                <p class="text">random</p>
-                                <i class="icon" data-feather="chevron-right"></i>
-                            </div>
-                            <div class="cnt cnt-3">
-                                <p class="text">phonk</p>
-                                <i class="icon" data-feather="chevron-right"></i>
-                            </div>
-                            <div class="cnt cnt-4">
-                                <p class="text">ambient</p>
-                                <i class="icon" data-feather="chevron-right"></i>
+
+        <div id="home-container">
+            <div id="menuPlay" style="display: block;">
+                <div style="display: flex; justify-content: center; position: relative;">
+                    <div class="lock"></div>
+                    <div class="concept-wrap" id="mainWrap">
+                        <div class="tap">
+                            <div class="wave"></div>
+                        </div>
+                        <div class="btn-wrap" id="btn">
+                            <div class="btn-cnt" id="content">
+                                <div class="cnt cnt-1">
+                                    <p class="text">vinahouse</p>
+                                    <i class="icon" data-feather="chevron-right"></i>
+                                </div>
+                                <div class="cnt cnt-2">
+                                    <p class="text">random</p>
+                                    <i class="icon" data-feather="chevron-right"></i>
+                                </div>
+                                <div class="cnt cnt-3">
+                                    <p class="text">phonk</p>
+                                    <i class="icon" data-feather="chevron-right"></i>
+                                </div>
+                                <div class="cnt cnt-4">
+                                    <p class="text">ambient</p>
+                                    <i class="icon" data-feather="chevron-right"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="player-container" id="playContainer">
-                <!-- Song -->
-                <div class="img-container">
-                    <img src="" alt="Album Art" />
-                </div>
-                <h2 id="title"></h2>
-                <h3 id="artist"></h3>
-                <audio src=""></audio>
-                <!-- Progress -->
-                <div class="progress-container" id="progress-container">
-                    <div class="progress" id="progress"></div>
-                    <div class="duration-wrapper">
-                        <span id="current-time">0:00</span>
-                        <span id="duration"></span>
+                <div class="player-container" id="playContainer">
+                    <!-- Song -->
+                    <div class="img-container">
+                        <img src="" alt="Album Art" />
                     </div>
-                </div>
-                <!-- Controls -->
-                <div class="player-controls">
-                    <i class="fas fa-backward" id="prev" title="Previous"></i>
-                    <i class="fas fa-play main-button" id="play" title="Play"></i>
-                    <i class="fas fa-forward" id="next" title="Next"></i>
+                    <h2 id="title"></h2>
+                    <h3 id="artist"></h3>
+                    <audio src=""></audio>
+                    <!-- Progress -->
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress" id="progress"></div>
+                        <div class="duration-wrapper">
+                            <span id="current-time">0:00</span>
+                            <span id="duration"></span>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <div class="player-controls">
+                        <i class="fas fa-backward" id="prev" title="Previous"></i>
+                        <i class="fas fa-play main-button" id="play" title="Play"></i>
+                        <i class="fas fa-forward" id="next" title="Next"></i>
+                    </div>
                 </div>
             </div>
         </div>

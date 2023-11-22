@@ -10,7 +10,6 @@ const prevBtn = document.getElementById("prev");
 const playBtn = document.getElementById("play");
 const nextBtn = document.getElementById("next");
 const video = document.getElementById("vidBack");
-
 // Music
 let ambientSong = [
     {
@@ -56,24 +55,23 @@ let ambientSong = [
     {
         name: "nostalgia",
         displayName: "nostalgia",
-        artist: "Øneheart"
+        artist: "Øneheart",
     },
     {
         name: "Melancholy",
         displayName: "Melancholy",
-        artist: "WHITE CHERRY"
+        artist: "WHITE CHERRY",
     },
     {
         name: "We're Finally Landing",
         displayName: "We're Finally Landing",
-        artist: "Home"
+        artist: "Home",
     },
     {
         name: "My Love Mine All Mine",
         displayName: "My Love Mine All Mine",
-        artist: "Mitski"
-    }
-    
+        artist: "Mitski",
+    },
 ];
 // ,
 // {
@@ -177,8 +175,7 @@ let phonkSong = [
         name: "johnwick_mix",
         displayName: "Complete John Wick Mode Mix",
         artist: "Le Castle Vania",
-    }
-    
+    },
 ];
 // ,
 // {
@@ -285,8 +282,8 @@ let randomSong = [
         artist: "The Neighbourhood",
     },
     {
-        name: "collide",
-        displayName: "collide",
+        name: "Collide",
+        displayName: "Collide",
         artist: "Avicii (ft. Leona Lewis)",
     },
     {
@@ -303,61 +300,62 @@ let randomSong = [
         name: "johnwick_inmymind",
         displayName: "In My Mind",
         artist: "M86 ft. Susie Q",
-    },{
+    },
+    {
         name: "L'Amour Toujours",
         displayName: "L'Amour Toujours",
-        artist: "Dzeko & Torres"
+        artist: "Dzeko & Torres",
     },
     {
         name: "Million Days",
         displayName: "Million Days",
-        artist: "Sabai"
+        artist: "Sabai",
     },
     {
         name: "MAYDAY",
         displayName: "MAYDAY",
-        artist: "TheFatRat"
+        artist: "TheFatRat",
     },
     {
         name: "Arena Queue",
         displayName: "Arena Queue",
-        artist: "League Of Legends"
+        artist: "League Of Legends",
     },
     {
         name: "Hẹn Em",
         displayName: "Hẹn Em",
-        artist: "Nguyenn"
+        artist: "Nguyenn",
     },
     {
         name: "Cold Heart",
         displayName: "Cold Heart",
-        artist: "Elton John, Dua Lipa"
+        artist: "Elton John, Dua Lipa",
     },
     {
         name: "As It Was",
         displayName: "As It Was",
-        artist: "Harry Styles"
+        artist: "Harry Styles",
     },
     {
         name: "California Gurls",
         displayName: "California Gurls",
-        artist: "Katy Perry"
+        artist: "Katy Perry",
     },
     {
         name: "You Belong With Me",
         displayName: "You Belong With Me",
-        artist: "Taylor Swift"
+        artist: "Taylor Swift",
     },
     {
         name: "Notion",
         displayName: "Notion",
-        artist: "The Rare Occasions"
+        artist: "The Rare Occasions",
     },
     {
         name: "Puppy Love",
         displayName: "Puppy Love",
-        artist: "Paul Anka"
-    }
+        artist: "Paul Anka",
+    },
 ];
 // ,
 // {
@@ -385,16 +383,14 @@ let vinaSong = [
     {
         name: "WHAT",
         displayName: "WHAT",
-        artist: "Rnbstylerz & AREES"
+        artist: "Rnbstylerz & AREES",
     },
     {
         name: "Thereon",
         displayName: "Light It Up x Rise",
-        artist: "Thereon"
-    }
-    
+        artist: "Thereon",
+    },
 ];
-
 
 
 // ,
