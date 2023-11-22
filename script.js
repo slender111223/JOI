@@ -411,32 +411,20 @@ function checkPlaylist() {
         case 0:
             {
                 unShuffledSongs = ambientSong;
-                let arrControl = ["prev", "play", "next"];
-                for (let i of arrControl) {
-                    document.getElementById(i).style.color = "white";
-                }
             }
             break;
-        case 1: {
-            unShuffledSongs = phonkSong;
-            let arrControl = ["prev", "play", "next"];
-            for (let i of arrControl) {
-                document.getElementById(i).style.color = "white";
+        case 1:
+            {
+                unShuffledSongs = phonkSong;
             }
-        }; break;
-        case 2:{
-            unShuffledSongs = randomSong;
-            let arrControl = ["prev", "play", "next"];
-            for (let i of arrControl) {
-                document.getElementById(i).style.color = "black";
+            break;
+        case 2:
+            {
+                unShuffledSongs = randomSong;
             }
-        };break;
-        case 3:{
+            break;
+        case 3: {
             unShuffledSongs = vinaSong;
-            let arrControl = ["prev", "play", "next"];
-            for (let i of arrControl) {
-                document.getElementById(i).style.color = "white";
-            }
         }
     }
     pauseSong();
@@ -451,6 +439,7 @@ function checkPlaylist() {
     currentTimeEle.textContent = "0:00";
     progress.style.width = `0%`;
 }
+
 
 // Update DOM
 function loadSong(song) {
@@ -783,12 +772,11 @@ function changeBanner({ name, color }) {
     }else{
         body.style.backgroundImage = "url(./img/bg/bg_" + name + ".jpg)";
     }
-
     btn.style.backgroundImage = "url(./img/banner/banner_" + name + ".jpg";
     changeVideoBackground(name);
     document.getElementById("playContainer").style.backgroundImage = "url(./img/cardbg/play_card_" + name + ".jpg)";
     document.body.style.color = color;
-    let arrControl = ["prev", "play", "next"];
+    let arrControl = ["prev", "play", "next","title","artist"];
     for (let i of arrControl) {
         document.getElementById(i).style.color = color;
     }
