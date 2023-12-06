@@ -559,10 +559,10 @@ function checkVideo(name) {
 function changeSource(url) {
     let v = document.getElementById("vidBack");
     v.src = url;
-    if(String(url).includes("bg_phonk") || String(url).includes("bg_vinahouse") ){
-        v.type = "video/mp4"
+    if(String(url).includes("bg_phonk.mp4") || String(url).includes("bg_vinahouse") ){
+        v.setAttribute("type","video/mp4")
     }else{
-        v.type = "video/webm"
+        v.setAttribute("type","video/webm")
     }
 }
 
