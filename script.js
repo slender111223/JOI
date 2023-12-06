@@ -72,6 +72,56 @@ let ambientSong = [
         displayName: "My Love Mine All Mine",
         artist: "Mitski",
     },
+    {
+        name: "hotline",
+        displayName: "hotline",
+        artist: "Billie Eilish"
+    },
+    {
+        name: "Agape",
+        displayName: "Agape",
+        artist: "Nicholas Britell"
+    },
+    {
+        name: "Chamber of Reflection",
+        displayName: "Chamber of Reflection",
+        artist: "Mac DeMarco"
+    },
+    {
+        name: "Comfort Chain",
+        displayName: "Comfort Chain",
+        artist: "Instupendo"
+    },
+    {
+        name: "Reborn",
+        displayName: "Reborn",
+        artist: "Hereditary"
+    },
+    {
+        name: "Space Song",
+        displayName: "Space Song",
+        artist: "Beach House"
+    },
+    {
+        name: "Only Time",
+        displayName: "Only Time",
+        artist: "Enya"
+    },
+    {
+        name: "lonesome town",
+        displayName: "lonesome town",
+        artist: "Ricky Nelson"
+    },
+    {
+        name: "Pope Is a Rockstar",
+        displayName: "Pope Is a Rockstar",
+        artist: "SALES"
+    },
+    {
+        name: "Take on Me",
+        displayName: "Take on Me",
+        artist: "Ellie ♥"
+    }
 ];
 // ,
 // {
@@ -176,6 +226,16 @@ let phonkSong = [
         displayName: "Complete John Wick Mode Mix",
         artist: "Le Castle Vania",
     },
+    {
+        name: "ecstacy",
+        displayName: "ecstacy",
+        artist: "SUICIDAL-IDOL"
+    },
+    {
+        name: "When Will It End",
+        displayName: "When Will It End",
+        artist: "Birth Day"
+    }
 ];
 // ,
 // {
@@ -356,6 +416,63 @@ let randomSong = [
         displayName: "Puppy Love",
         artist: "Paul Anka",
     },
+    {
+        name: "Cant Help Falling In Love",
+        displayName: "Can't Help Falling In Love",
+        artist: "Elvis Presley"
+    },
+    {
+        name: "On The Floor",
+        displayName: "On The Floor",
+        artist: "Jennifer Lopez"
+    },
+    {
+        name: "Viva la vida",
+        displayName: "Viva la vida",
+        artist: "Coldplay"
+    },
+    {
+        name: "You Know How We Do It",
+        displayName: "You Know How We Do It",
+        artist: "Ice Cube"
+    },
+    {
+        name: "Everybody Wants To Rule The World",
+        displayName: "EWTRTW",
+        artist: "Tears For Fears"
+    },
+    {
+        name: "Summertime Sadness",
+        displayName: "Summertime Sadness",
+        artist: "Lana Del Rey"
+    },
+    {
+        name: "Creep",
+        displayName: "Creep",
+        artist: "Alosa, HALUNA"
+    },
+    {
+        name: "I Aint Worried",
+        displayName: "I Ain’t Worried",
+        artist: "OneRepublic"
+    },
+    {
+        name: "Dandelions",
+        displayName: "Dandelions",
+        artist: "Ruth B."
+    },
+    {
+        name: "Night Changes",
+        displayName: "Night Changes",
+        artist: "One Direction"
+    },
+    {
+        name: "Reckless",
+        displayName: "Reckless",
+        artist: "Madison Beer"
+    }
+    
+    
 ];
 // ,
 // {
