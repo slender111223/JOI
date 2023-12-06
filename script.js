@@ -562,6 +562,19 @@ function checkPlaylist() {
 function loadSong(song) {
     title.textContent = song.displayName;
     artist.textContent = song.artist;
+    if(song.name === "Take on Me"){
+        if (!checkVideo("bg_ellie")) {
+            changeSource("./video/bg_ellie.mp4")
+        }
+        
+    }else{
+        if(c===0){
+            if (!checkVideo("bg_ambient")) {
+                changeSource("./video/bg_ambient.webm");
+            }
+        }
+        
+    }
     music.src = `music/${song.name}.mp3`;
     if(String(song.name).includes("johnwick")){
         image.src = `img/music/johnwick.jpg`;
@@ -600,7 +613,7 @@ function playSong() {
     changeVideoBackground();
 }
 
-function changeVideoBackground(whatKind,extension) {
+function changeVideoBackground(whatKind) {
     switch (whatKind) {
         case "ambient":
             {
@@ -676,7 +689,7 @@ function checkVideo(name) {
 function changeSource(url) {
     let v = document.getElementById("vidBack");
     v.src = url;
-    if(String(url).includes("bg_phonk.mp4") || String(url).includes("bg_vinahouse") ){
+    if(String(url).includes("bg_phonk.mp4") || String(url).includes("bg_vinahouse") || String(url).includes("bg_ellie")  ){
         v.setAttribute("type","video/mp4")
     }else{
         v.setAttribute("type","video/webm")
